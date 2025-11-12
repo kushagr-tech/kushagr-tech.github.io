@@ -160,6 +160,71 @@ function initContactForm() {
     const form = document.getElementById('contact-form');
     
     if (!form) return;
+    // If the form has an action (e.g., Formspree), validate then allow native submit
+    if (form.getAttribute('action')) {
+        form.addEventListener('submit', function(e) {
+            // Read values
+            const formData = new FormData(form);
+            const name = (formData.get('name') || '').toString().trim();
+            const email = (formData.get('email') || '').toString().trim();
+            const subject = (formData.get('subject') || '').toString().trim();
+            const message = (formData.get('message') || '').toString().trim();
+            const phone = (formData.get('phone') || '').toString().trim();
+            
+            const errors = [];
+            
+            // Name
+            if (!name) {
+                errors.push('Name is required');
+            } else if (name.length < 2) {
+                errors.push('Name must be at least 2 characters');
+            }
+            
+            // Email
+            if (!email) {
+                errors.push('Email is required');
+            } else if (!isValidEmail(email)) {
+                errors.push('Please enter a valid email address');
+            }
+            
+            // Subject
+            if (!subject) {
+                errors.push('Subject is required');
+            } else if (subject.length < 3) {
+                errors.push('Subject must be at least 3 characters');
+            }
+            
+            // Message
+            if (!message) {
+                errors.push('Message is required');
+            } else if (message.length < 10) {
+                errors.push('Message must be at least 10 characters');
+            }
+            
+            // Phone (optional)
+            if (phone && !isValidPhone(phone)) {
+                errors.push('Please enter a valid phone number');
+            }
+            
+            if (errors.length > 0) {
+                e.preventDefault();
+                showMessage(errors.join('. '), 'error');
+                // Trigger native UI hints if available
+                form.reportValidity && form.reportValidity();
+                return;
+            }
+            
+            // Loading state while Formspree submits
+            const submitBtn = form.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                const originalText = submitBtn.innerHTML;
+                submitBtn.dataset.originalText = originalText;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+            }
+        });
+        return;
+    }
     
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -223,6 +288,12 @@ function validateForm(name, email, project) {
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+
+// Phone validation (simple, permissive for international formats)
+function isValidPhone(phone) {
+    const phoneRegex = /^\+?[0-9\s\-()]{7,20}$/;
+    return phoneRegex.test(phone);
 }
 
 // Show message function
