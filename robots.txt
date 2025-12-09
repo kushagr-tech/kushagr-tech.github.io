@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Allow: /llm.txt
+Sitemap: https://kushagr.tech/sitemap.xml

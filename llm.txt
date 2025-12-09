@@ -1,0 +1,35 @@
+# Kushagr Agarwal - Senior Mobile & Web Developer
+
+## Profile Summary
+Kushagr Agarwal is a Senior Mobile and Web Developer based in Hyderabad, India, with over 2 years of professional experience. He specializes in cross-platform mobile development using Flutter, native iOS development with Swift, and high-performance web applications using React and Three.js.
+
+## Key Skills
+- **Mobile Development**: Flutter (Dart), iOS (Swift, Objective-C), Bloc Pattern, GetX
+- **Web Development**: HTML5, CSS3, JavaScript, React.js, Three.js
+- **Backend/Database**: Firebase, MongoDB, Node.js
+- **Real-time Tech**: WebRTC, WebSocket
+- **Tools**: Git, CI/CD, XCode, Android Studio, Figma
+
+## Professional Experience
+1. **Edvak Health** (Mar 2024 - Present): 
+   - Role: Flutter Developer
+   - Key Achievement: Built 'eCareHub' patient portal with WebRTC telemedicine, reducing dev time by 30%.
+2. **Athena Education** (Sep 2023 - Mar 2024): 
+   - Role: App Development Mentor
+   - Key Achievement: Guided students to publish 3 apps on the App Store.
+3. **Trainman (Adani Digital)** (Jun 2022 - Dec 2022): 
+   - Role: iOS Developer Intern
+   - Key Achievement: Improved iOS app crash-free rate to 98.2% and optimized IRCTC booking flows.
+
+## Featured Projects
+- **Desi Needs**: A hyperlocal marketplace app for the Indian community featuring classifieds, ticket booking, and services. (Live on Play Store).
+- **eCareHub**: Enterprise EHR application for patient management and telemedicine.
+- **Trainman iOS**: Official app for IRCTC train booking with millions of users.
+- **Serendipity**: A modern real-time dating application.
+- **DRKD Tradelink**: Corporate website for a logistics LLP.
+
+## Contact Information
+- **Email**: Kushagr6179@gmail.com
+- **LinkedIn**: linkedin.com/in/kushagragarwal
+- **Phone**: +91 89989 17559
+- **Location**: Hyderabad, Telangana, India
