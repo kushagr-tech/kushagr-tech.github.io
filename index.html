@@ -3,127 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kushagr Agarwal - Mobile App Developer</title>
+    <title>Kushagr Agarwal | Creative Developer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 </head>
 <body>
+    <!-- 3D Background Canvas -->
+    <div id="canvas-container"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
+    <nav class="navbar glass">
+        <div class="container nav-container">
             <div class="nav-brand">
-                <h3>Kushagr</h3>
+                <h3>Kushagr<span class="dot">.</span></h3>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
+                <a href="#work" class="nav-link">Work</a>
                 <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#playground" class="nav-link">Playground</a>
+                <a href="#contact" class="nav-link btn-contact">Contact</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="floating-elements">
-            <div class="floating-phone"></div>
-            <div class="floating-app-icon app-icon-1"></div>
-            <div class="floating-app-icon app-icon-2"></div>
-            <div class="floating-app-icon app-icon-3"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Mobile App Developer</h1>
-                    <p class="hero-subtitle">Crafting exceptional Flutter & iOS experiences with 2+ years of expertise in mobile development</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn--primary">
-                            <i class="fas fa-mobile-alt"></i>
-                            View My Apps
-                        </a>
-                        <a href="#contact" class="btn btn--outline">
-                            <i class="fas fa-envelope"></i>
-                            Contact Me
-                        </a>
-                    </div>
+        <div class="container hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-badge">
+                    <span class="pulse"></span> Available for projects
                 </div>
-                <div class="hero-image">
-                    <div class="profile-image">
-                        <div class="profile-placeholder">
-                            <i class="fas fa-user"></i>
+                <h1 class="hero-title">
+                    Building Digital <br>
+                    <span class="gradient-text">Masterpieces</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Senior Mobile & Web Developer specializing in Flutter, iOS, and high-performance web applications. I turn complex ideas into elegant, scalable reality.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn--primary">
+                        View Work <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn--glass">
+                        Contact Me
+                    </a>
+                </div>
+                
+                <div class="stats-row glass" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-item">
+                        <div><span class="stat-num" data-count="3">0</span>+</div>
+                        <span class="stat-label">Years Exp.</span>
+                    </div>
+                    <div class="stat-item">
+                        <div>
+                            <span class="stat-num" data-count="10">0</span>+
                         </div>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <div>
+                            <span class="stat-num" data-count="98">0</span>%
+                        </div>
+                        <span class="stat-label">Crash Free</span>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll</p>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Client Projects (The Specific List) -->
+    <section id="work" class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <p>Passionate mobile developer with expertise in creating scalable applications</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="gradient-text">Featured Work</h2>
+                <p>Enterprise and Client Applications</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Software Engineer with 2+ years of experience in mobile and full-stack development. Skilled in designing, developing, and deploying scalable software. Expertise in architecture, debugging, performance optimization, and leading technical discussions.</p>
-                    <div class="achievements-grid">
-                        <div class="achievement-item">
-                            <div class="achievement-number" data-count="2">0</div>
-                            <div class="achievement-label">Years Experience</div>
+            
+            <div class="projects-grid">
+                <!-- 1. eCareHub (Added Explicitly) -->
+                <div class="project-card glass" data-tilt data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image-wrapper">
+                        <div class="card-image gradient-ehr">
+                            <i class="fas fa-heartbeat"></i>
                         </div>
-                        <div class="achievement-item">
-                            <div class="achievement-number" data-count="30">0</div>
-                            <div class="achievement-label">% Dev Time Reduction</div>
+                        <div class="card-badge">Enterprise</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>eCareHub</h3>
+                            <div class="links">
+                                <a href="https://play.google.com/store/apps/details?id=com.ecarehub.patientportal" target="_blank" class="external-link" title="Play Store"><i class="fab fa-google-play"></i></a>
+                                <a href="https://apps.apple.com/in/app/ecarehub/id6737409516" target="_blank" class="external-link" title="App Store"><i class="fab fa-apple"></i></a>
+                            </div>
                         </div>
-                        <div class="achievement-item">
-                            <div class="achievement-number" data-count="98.2">0</div>
-                            <div class="achievement-label">% Crash-Free Rate</div>
-                        </div>
-                        <div class="achievement-item">
-                            <div class="achievement-number" data-count="3">0</div>
-                            <div class="achievement-label">Apps Published</div>
+                        <p>Enterprise-level patient portal for Edvak Health. Features secure appointments, medical records, payments, and WebRTC telemedicine.</p>
+                        <div class="tech-stack">
+                            <span>Flutter</span><span>WebRTC</span><span>Healthcare</span>
                         </div>
                     </div>
                 </div>
-                <div class="skills-section">
-                    <h3>Technical Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4><i class="fas fa-code"></i> Languages</h4>
-                            <div class="skill-items">
-                                <span class="skill-tag">Dart</span>
-                                <span class="skill-tag">Swift</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">C++</span>
-                                <span class="skill-tag">Objective-C</span>
-                            </div>
+
+                <!-- 2. Desi Needs -->
+                <div class="project-card glass" data-tilt data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image-wrapper">
+                        <div class="card-image gradient-desi">
+                            <i class="fas fa-shopping-basket"></i>
                         </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-layer-group"></i> Frameworks</h4>
-                            <div class="skill-items">
-                                <span class="skill-tag">Flutter</span>
-                                <span class="skill-tag">React</span>
-                                <span class="skill-tag">Bloc</span>
-                            </div>
+                        <div class="card-badge">Live</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Desi Needs</h3>
+                            <a href="https://play.google.com/store/apps/details?id=com.desineeds.app&hl=en_IN&pli=1" target="_blank" class="external-link"><i class="fab fa-google-play"></i></a>
                         </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-tools"></i> Technologies</h4>
-                            <div class="skill-items">
-                                <span class="skill-tag">Firebase</span>
-                                <span class="skill-tag">MongoDB</span>
-                                <span class="skill-tag">WebRTC</span>
-                                <span class="skill-tag">WebSocket</span>
-                            </div>
+                        <p>A comprehensive local marketplace app. Connects communities through classifieds, ticket booking, and service discovery.</p>
+                        <div class="tech-stack">
+                            <span>Flutter</span><span>Firebase</span><span>Marketplace</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Trainman -->
+                <div class="project-card glass" data-tilt data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image-wrapper">
+                        <div class="card-image gradient-train">
+                            <i class="fas fa-subway"></i>
+                        </div>
+                        <div class="card-badge">1M+ Users</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Trainman iOS</h3>
+                        </div>
+                        <p>Official iOS app for train ticket booking using IRCTC API. Optimized for speed, reliability, and complex booking flows.</p>
+                        <div class="tech-stack">
+                            <span>iOS</span><span>Swift</span><span>IRCTC API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DRKD Tradelink -->
+                <div class="project-card glass" data-tilt data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-image-wrapper">
+                        <div class="card-image gradient-drkd">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>DRKD Tradelink</h3>
+                            <a href="https://drkdtradelink.com" target="_blank" class="external-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p>Corporate landing page for a logistics firm. Responsive web design focusing on brand authority and service showcase.</p>
+                        <div class="tech-stack">
+                            <span>Web</span><span>Responsive</span><span>Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- 5. Serendipity -->
+                 <div class="project-card glass" data-tilt data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-image-wrapper">
+                        <div class="card-image gradient-dating">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Serendipity</h3>
+                        </div>
+                        <p>Modern dating application. Features real-time chat, profile matching algorithms, and geolocation services.</p>
+                        <div class="tech-stack">
+                            <span>Flutter</span><span>Social</span><span>Real-time</span>
                         </div>
                     </div>
                 </div>
@@ -132,172 +200,48 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <section id="experience" class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Professional Experience</h2>
-                <p>Journey through my professional growth in mobile development</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="gradient-text">Experience</h2>
+                <p>My professional journey in the tech industry</p>
             </div>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="company-header">
-                            <div class="company-logo">
-                                <i class="fas fa-heartbeat"></i>
-                            </div>
-                            <div class="company-info">
-                                <h3>Flutter Developer</h3>
-                                <h4>Edvak Health</h4>
-                                <span class="duration">Mar 2024 – Sep 2025 | Hyderabad, Telangana</span>
-                            </div>
-                        </div>
-                        <ul class="achievements-list">
-                            <li>Led development of enterprise-level mobile app</li>
-                            <li>Designed modular widgets, reducing feature dev time by 30%</li>
-                            <li>Integrated secure payment system into patient portal</li>
-                            <li>Built scalable, maintainable architecture</li>
-                            <li>Implemented Bloc-based state management</li>
-                            <li>Integrated WebSocket technology for real-time data</li>
-                            <li>Added WebRTC for telemedicine video communication</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="company-header">
-                            <div class="company-logo">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="company-info">
-                                <h3>App Development Mentor</h3>
-                                <h4>Athena Education</h4>
-                                <span class="duration">Sep 2023 – Mar 2024 | Gurugram, Haryana</span>
-                            </div>
-                        </div>
-                        <ul class="achievements-list">
-                            <li>Trained high school students in full-stack app development</li>
-                            <li>Guided 3 apps from ideation to successful App Store publication</li>
-                            <li>Used Flutter, Firebase, MongoDB technologies</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="company-header">
-                            <div class="company-logo">
-                                <i class="fas fa-train"></i>
-                            </div>
-                            <div class="company-info">
-                                <h3>iOS Developer Intern</h3>
-                                <h4>Trainman (Acquired by Adani Digital Labs)</h4>
-                                <span class="duration">Jun 2022 – Dec 2022 | Gurugram, Haryana</span>
-                            </div>
-                        </div>
-                        <ul class="achievements-list">
-                            <li>Redesigned UI/UX, reducing drop rate and increasing retention</li>
-                            <li>Improved crash-free rate from 91% to 98.2%</li>
-                            <li>Optimized app performance and feature integration</li>
-                            <li>Analyzed crash reports and performance metrics</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Mobile applications that showcase my development expertise</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card featured">
-                    <div class="project-image">
-                        <div class="app-mockup">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>eCareHub</h3>
-                        <p>Enterprise-level patient portal mobile app for Edvak Health</p>
-                        <div class="project-features">
-                            <span>Appointment booking</span>
-                            <span>Medical records access</span>
-                            <span>Secure payments</span>
-                            <span>Telemedicine</span>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Dart</span>
-                            <span class="tech-tag">WebRTC</span>
-                            <span class="tech-tag">WebSocket</span>
-                            <span class="tech-tag">Bloc</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.ecarehub.patientportal" target="_blank" class="project-link">
-                                <i class="fab fa-google-play"></i>
-                                Play Store
-                            </a>
-                            <a href="https://apps.apple.com/in/app/ecarehub/id6737409516" target="_blank" class="project-link">
-                                <i class="fab fa-apple"></i>
-                                App Store
-                            </a>
+                <!-- Edvak -->
+                <div class="timeline-card glass" data-aos="fade-left">
+                    <div class="timeline-date">Mar 2024 - Present</div>
+                    <div class="timeline-body">
+                        <h3>Flutter Developer</h3>
+                        <h4>Edvak Health</h4>
+                        <p>Led development of the eCareHub enterprise app. Implemented WebRTC telemedicine and reduced dev time by 30% through modular architecture.</p>
+                        <div class="tags">
+                            <span>Flutter</span><span>WebRTC</span><span>Bloc</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="app-mockup">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Foodie - Restaurant Recommender</h3>
-                        <p>Restaurant search, review and ordering app</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">MongoDB</span>
+                <!-- Athena -->
+                <div class="timeline-card glass" data-aos="fade-right">
+                    <div class="timeline-date">Sep 2023 - Mar 2024</div>
+                    <div class="timeline-body">
+                        <h3>App Development Mentor</h3>
+                        <h4>Athena Education</h4>
+                        <p>Mentored high school students, guiding 3 apps from ideation to successful App Store publication.</p>
+                        <div class="tags">
+                            <span>Mentoring</span><span>Full Stack</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="app-mockup">
-                            <i class="fas fa-cloud-sun"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Weather App</h3>
-                        <p>Real-time weather data application</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">OpenWeatherMap API</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="app-mockup">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Attendance Management System</h3>
-                        <p>Student attendance tracking system</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">React.js</span>
+                <!-- Trainman -->
+                <div class="timeline-card glass" data-aos="fade-left">
+                    <div class="timeline-date">Jun 2022 - Dec 2022</div>
+                    <div class="timeline-body">
+                        <h3>iOS Developer Intern</h3>
+                        <h4>Trainman (Adani Digital)</h4>
+                        <p>Optimized the official booking iOS app. Improved crash-free rate to 98.2% and redesigned core UI flows.</p>
+                        <div class="tags">
+                            <span>iOS</span><span>Swift</span><span>IRCTC API</span>
                         </div>
                     </div>
                 </div>
@@ -305,140 +249,78 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Personal Projects (Playground) -->
+    <section id="playground" class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Services</h2>
-                <p>Comprehensive mobile development solutions</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Personal Playground</h2>
+                <p>Experiments and Open Source contributions</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+            
+            <div class="mini-grid">
+                <!-- Foodie -->
+                <div class="mini-card glass" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="mini-icon"><i class="fas fa-utensils"></i></div>
+                    <div class="mini-content">
+                        <h4>Foodie</h4>
+                        <p>Restaurant recommender & review system using MongoDB.</p>
                     </div>
-                    <h3>Flutter App Development</h3>
-                    <p>Cross-platform mobile apps with native performance</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fab fa-apple"></i>
-                    </div>
-                    <h3>iOS App Development</h3>
-                    <p>Native iOS apps using Swift and Objective-C</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Full-Stack Development</h3>
-                    <p>End-to-end application development and deployment</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>App Store Optimization</h3>
-                    <p>Improve app visibility and download rates</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Mentoring & Consultation</h3>
-                    <p>Technical guidance and project consultation</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Let's Work Together</h2>
-                <p>Ready to bring your mobile app idea to life?</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xqawkkeg" method="POST" novalidate>
-                        <div class="form-group">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-control" autocomplete="name" minlength="2" maxlength="100" pattern="^[A-Za-z][A-Za-z\s'.-]{1,99}$" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Your Email</label>
-                            <input type="email" id="email" name="email" class="form-control" autocomplete="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" minlength="3" maxlength="150" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone (optional)</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" inputmode="tel" autocomplete="tel" pattern="^\\+?[0-9\\s\\-()]{7,20}$" placeholder="+91 00000 00000">
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea id="message" name="message" class="form-control" rows="5" minlength="10" maxlength="2000" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn--primary btn--full-width">
-                            <i class="fas fa-paper-plane"></i>
-                            Send
-                        </button>
-                    </form>
+                <!-- Weather -->
+                <div class="mini-card glass" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="mini-icon"><i class="fas fa-cloud-sun"></i></div>
+                    <div class="mini-content">
+                        <h4>Weather App</h4>
+                        <p>Real-time forecast iOS app using OpenWeatherMap.</p>
+                    </div>
                 </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <a href="mailto:Kushagr6179@gmail.com">Kushagr6179@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <a href="tel:+918998917559">+91 89989 17559</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <span>Hyderabad, Telangana</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/kushagragarwal" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="mailto:Kushagr6179@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+
+                <!-- Attendance -->
+                <div class="mini-card glass" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="mini-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <div class="mini-content">
+                        <h4>Attendance System</h4>
+                        <p>Student tracking system built with React & Flutter.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Kushagr Agarwal. All rights reserved.</p>
-                <p>Mobile App Developer | Flutter & iOS Specialist</p>
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container contact-container">
+            <div class="contact-box glass" data-aos="flip-up">
+                <h2>Let's create something amazing</h2>
+                <p>Have a project in mind? Let's talk.</p>
+                
+                <form class="contact-form" action="https://formspree.io/f/xqawkkeg" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                </form>
+
+                <div class="contact-socials">
+                    <a href="mailto:Kushagr6179@gmail.com"><i class="fas fa-envelope"></i> Kushagr6179@gmail.com</a>
+                    <a href="https://linkedin.com/in/kushagragarwal" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/kushagr-tech" target="_blank"><i class="fab fa-github"></i> Github</a>
+                    <a href="tel:+918755917559"><i class="fas fa-phone"></i> +91 87559 17559</a>
+                </div>
             </div>
         </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kushagr Agarwal. Crafted with <i class="fas fa-heart"></i> & Three.js</p>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
