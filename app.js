@@ -4,7 +4,7 @@
 //     initCounters();
 //     initSmoothScroll();
 // });
-
+// 
 // // --- 1. THREE.JS BACKGROUND ---
 // function initThreeJS() {
 //     const container = document.getElementById('canvas-container');
@@ -295,7 +295,10 @@ function initSmoothScroll() {
             if(target) {
                 target.scrollIntoView({ behavior: 'smooth' });
                 // Close mobile menu if open
-                document.getElementById('nav-menu').classList.remove('active');
+                const menu = document.getElementById('nav-menu');
+                const toggle = document.getElementById('nav-toggle');
+                if(menu) menu.classList.remove('active');
+                if(toggle) toggle.classList.remove('open');
             }
         });
     });
